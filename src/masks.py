@@ -22,4 +22,4 @@ def get_mask_account(score_number: str) -> str:
     return masked_score
 
 
-print(get_mask_account("73654108430135874305"))
+print(get_mask_account("Счет 64686473678894779589"))
