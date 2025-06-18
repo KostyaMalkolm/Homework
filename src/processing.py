@@ -1,4 +1,4 @@
-from typing import List, Dict, Union
+from typing import List, Dict, Union, Any
 from datetime import datetime
 
 list_of_operations: List[Dict[str, Union[str, int]]] = [
@@ -17,9 +17,20 @@ def sort_by_date(sorting: List[Dict[str, Union[str, int]]], reverse: bool = True
     operation_of_sorting = sorting.copy()
     operation_of_sorting.sort(
         key=lambda x: datetime.fromisoformat(x["date"]) if isinstance(x["date"], str) else datetime.min,
-        reverse=reverse)
+        reverse=reverse,
+    )
 
     return operation_of_sorting
 
 
 print(sort_by_date(list_of_operations))
+
+
+def filter_by_state(list_of_operations: List[Dict[str, Any]], state: str = "EXECUTED") -> list[Dict[str, Any]]:
+    """ "
+    Функция выдает только список словарей, у которых параметр "state" = "EXECUTED"
+    """
+    return list((item for item in list_of_operations if item.get("state") == state))
+
+
+print(filter_by_state(list_of_operations))
