@@ -9,7 +9,7 @@ list_of_operations: List[Dict[str, Union[str, int]]] = [
 ]
 
 
-def filter_by_state(list_of_operations: List[Dict[str, Any]], state: str = "EXECUTED") -> list[Dict[str, Any]]:
+def filter_by_state(list_of_operations: List[Dict[str, Any]], state: str = "EXECUTED") -> List[Dict[str, Any]]:
     """ "
     Функция выдает только список словарей, у которых параметр "state" = "EXECUTED"
     """
