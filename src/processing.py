@@ -9,6 +9,16 @@ list_of_operations: List[Dict[str, Union[str, int]]] = [
 ]
 
 
+def filter_by_state(list_of_operations: List[Dict[str, Any]], state: str = "EXECUTED") -> list[Dict[str, Any]]:
+    """ "
+    Функция выдает только список словарей, у которых параметр "state" = "EXECUTED"
+    """
+    return list((item for item in list_of_operations if item.get("state") == state))
+
+
+print(filter_by_state(list_of_operations))
+
+
 def sort_by_date(sorting: List[Dict[str, Union[str, int]]], reverse: bool = True) -> List[Dict[str, Union[str, int]]]:
     """
     Функция принимает список словарей и необязательный параметр, задающий порядок сортировки (по умолчанию — убывание).
@@ -24,13 +34,3 @@ def sort_by_date(sorting: List[Dict[str, Union[str, int]]], reverse: bool = True
 
 
 print(sort_by_date(list_of_operations))
-
-
-def filter_by_state(list_of_operations: List[Dict[str, Any]], state: str = "EXECUTED") -> list[Dict[str, Any]]:
-    """ "
-    Функция выдает только список словарей, у которых параметр "state" = "EXECUTED"
-    """
-    return list((item for item in list_of_operations if item.get("state") == state))
-
-
-print(filter_by_state(list_of_operations))
