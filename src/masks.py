@@ -18,7 +18,7 @@ def get_mask_account(score_number: str) -> str:
     Номер счета замаскирован и отображается в формате **XXXX, где X — это цифра номера.
     То есть видны только последние 4 цифры номера, а перед ними — две звездочки.
     """
-    masked_score = "**" + score_number[-4:]
+    masked_score = "Счет **" + score_number[-4:]
     return masked_score
 
 
