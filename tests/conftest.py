@@ -42,3 +42,49 @@ def sort_result_date() -> list[Dict]:
         {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'},
         {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}
     ]
+
+@pytest.fixture
+def currency_test_list():
+    return [
+        {
+            "id": 1,
+            "operationAmount": {
+                "currency": {"name": "USD", "code": "USD"}
+            }
+        },
+        {
+            "id": 2,
+            "operationAmount": {
+                "currency": {"name": "EUR", "code": "EUR"}
+            }
+        }
+    ]
+
+
+@pytest.fixture
+def currency_done_test_list():
+    return [
+        {
+            "id": 1,
+            "operationAmount": {
+                "currency": {"name": "USD", "code": "USD"}
+            }
+        }
+    ]
+
+
+@pytest.fixture
+def currency_no_usd():
+    return [
+        {
+            "id": 2,
+            "operationAmount": {
+                "currency": {"name": "EUR", "code": "EUR"}
+            }
+        }
+    ]
+
+
+@pytest.fixture
+def zero_list():
+    return []

@@ -26,7 +26,7 @@ def transaction_descriptions(transactions: List[Dict[Any, Any]]) -> Iterator[str
         raise ValueError('Список транзакций пуст')
 
     for transaction in transactions:
-        # Формируем строку описания транзакции
+        # Готовим строку описания транзакции
         description = transaction.get('description', '').strip()
 
         if description:
