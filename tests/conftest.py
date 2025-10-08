@@ -43,6 +43,7 @@ def sort_result_date() -> list[Dict]:
         {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}
     ]
 
+
 @pytest.fixture
 def currency_test_list():
     return [
