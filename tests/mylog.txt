@@ -1,0 +1,4 @@
+my_function ok, start func: 1762483323.0352361, end func: 1762483323.0352364
+my_function ok, start func: 1762483526.9269238, end func: 1762483526.926924
+my_function ok, start func: 1762483547.9969504, end func: 1762483547.9969506
+my_function ok, start func: 1762484018.931359, end func: 1762484018.9313593
